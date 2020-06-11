@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Churn Prediction</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churn Prediction</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-2">
+</div>
+<div class="col-md-8">
+
+
+<div class="panel panel-info">
+<div class="panel-heading"><h3>Churn Prediction</h3></div>
+
+
+<form action="{{ url_for('predict')}}" method="POST">
+<br><br>
+<div class="form-group row">
+    <label for="plan" class="col-sm-6 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Enter Valid Plan </label>
+    <div class="col-sm-6">
+      <input  type="text" placeholder="enter plan between 1,2,3,4 for plans of price 200,400,600,800"
+	  class="form-control" name="plan">
+    </div>
+	<br><br>
+	<label for="p" class="col-sm-6 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Enter initial Valid Plan </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="p1">
+    </div>
+	<br><br>
+	<label for="q" class="col-sm-6 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Enter Voice mail Plan </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="q1">
+    </div>
+	<br><br>
+	<label for="r" class="col-sm-6 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Total day charge </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="r1">
+    </div>
+	<br><br>
+	
+	<label for="s" class="col-sm-6 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Total eve charge </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="s1">
+    </div>
+	<br><br>
+	<label for="t" class="col-sm-6 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Total night charge </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="t1">
+    </div>
+	<br><br>
+	
+	<label for="u" class="col-sm-6 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Total init charge</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="u1">
+    </div>
+	<br><br>
+	<label for="v" class="col-sm-6 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Number Customer Service Call </label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="v1">
+    </div>
+	<br><br>
+  </div>
+  
+  
+<button type="submit" class="btn btn-primary btn-block">Predict</button>
+</form>
+ <br>
+            <p><h2 align='left'>Result:</h2><h2 id=result align='center'></h2></p>
+
+
+<div class="panel-footer"></div>
+</div>
+
+
+    
+
+</div>
+<div class="col-md-2">
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+</body>
+</html>
